@@ -1,12 +1,1 @@
-[
-  {
-    "code": "TEST123XYZ",
-    "title": "端到端测试码",
-    "cat": "测试",
-    "status": "ok",
-    "source": "e2e",
-    "note": "verify",
-    "by": "",
-    "added": 1784029447835
-  }
-]
+[]
