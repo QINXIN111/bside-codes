@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bside-sharecode",
+  "pages_build_output_dir": "./public",
+  "compatibility_date": "2026-07-16",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bside-sharecode-db",
+      "database_id": "50f39eac-e0b3-4cea-ba68-ef3e3990db41"
+    }
+  ]
+}

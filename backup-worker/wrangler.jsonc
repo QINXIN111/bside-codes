@@ -1,0 +1,30 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "bside-sharecode-backup",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-16",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": [
+      "15 18 * * *"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bside-sharecode-db",
+      "database_id": "50f39eac-e0b3-4cea-ba68-ef3e3990db41",
+      "remote": true
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "BACKUPS",
+      "id": "ac81c86e4ee64a80ac7fbd7d8ebcaf1f",
+      "remote": true
+    }
+  ]
+}

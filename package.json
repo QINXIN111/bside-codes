@@ -1,0 +1,23 @@
+{
+  "name": "bside-sharecode",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:seed": "node scripts/generate-seed.mjs",
+    "capture:live": "node scripts/capture-live-snapshot.mjs",
+    "test": "npm run test:snapshot && npm run test:syntax",
+    "test:snapshot": "node scripts/validate-snapshots.mjs",
+    "test:syntax": "node scripts/check-syntax.mjs",
+    "test:smoke": "node scripts/smoke-preview.mjs",
+    "test:write": "node scripts/smoke-write.mjs",
+    "db:migrate": "wrangler d1 migrations apply bside-sharecode-db --remote",
+    "db:migrate:preview": "wrangler d1 migrations apply bside-sharecode-preview-db --remote",
+    "db:export": "wrangler d1 export bside-sharecode-db --remote --output=./backup/d1-latest.sql",
+    "deploy:preview": "wrangler pages deploy public --project-name bside-sharecode --branch d1-preview",
+    "deploy:production": "wrangler pages deploy public --project-name bside-sharecode --branch main"
+  },
+  "devDependencies": {
+    "wrangler": "4.111.0"
+  }
+}
